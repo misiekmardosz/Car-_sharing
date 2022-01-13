@@ -59,12 +59,14 @@ logo img{
 }
 header li {
     display: inline-block;
+    height: 100%;
     padding: 33px 40px;
     font: normal normal bold 16px/22px Nunito Sans;
     color: white;
 }
-a:hover{
-    color: black;
+li:hover{
+    background:rgba(255, 255, 255, 0.3);
+    opacity: 50;
 }
 
 /*BANNER*/
@@ -111,12 +113,34 @@ button{
     border: none;
     color: white;
 }
-button:nth-of-type(2){
+button:hover{
     background: white;
     border-radius: 40px;
     padding: 22px 55px;
     color: rgba(255, 0, 0, 1)
 
+}
+p.arrow::before{
+    content: "";
+    display: block;
+    box-shadow: 0px 1px 6px rgba(255, 0, 0, 0.3);
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 0, 0, 1);
+    z-index: 1;
+    border-radius: 50px;
+    position: absolute;
+}
+
+
+p.arrow{
+    display: block;
+    background: url("../images/Icon_Arrow_Down.svg")no-repeat center/80%;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    margin-top: 807px;
+    z-index: 2;
 }
 
 /*BLOG*/
@@ -411,6 +435,10 @@ form.message button{
     border: 1px solid rgba(255, 0, 0, 1);
     border-radius: 40px;
     color: rgba(255, 0, 0, 1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: auto;
 
 }
 label span{
@@ -428,4 +456,46 @@ label span{
 }
 label input:checked+span{
     background: url("../images/Icon_Check.svg") no-repeat center/70%;
+}
+
+/*FOOTER*/
+
+
+footer {
+    background: rgba(40, 39, 44, 1);
+    height: 232px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.footer_logo{
+    display: flex;
+    align-items: center;
+}
+.footer_logo >* {
+    display: inline-block;
+    color: #FF0000;
+    text-align: left;
+    font: bold 27px Nunito Sans;
+}
+
+
+footer ul{
+    text-align: left;
+    font: normal normal bold 14px/19px Nunito Sans;
+    letter-spacing: 0px;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    opacity: 1;
+    margin-right: 141px;
+}
+li a{
+    text-decoration: none;
+    color:rgba(255, 255, 255, 1) ;
+}
+.footer_list{
+    display: flex;
+
 }
