@@ -135,7 +135,7 @@ h2{
     align-items: center;
     padding-top: 90px;
     text-align: left;
-    font: normal normal bold 35px/47px Nunito Sans;
+    font: bold 47px Nunito Sans;
     letter-spacing: 0px;
     color: rgba(0, 0, 0, 1);
     opacity: 1;
@@ -146,6 +146,30 @@ div.blog_title{
     justify-content: space-between;
     margin-bottom: 100px;
 }
+h2::before{
+    content: "";
+    margin: 0 10px;
+    display: block;
+    box-shadow: 0px 1px 6px rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 50px;
+    height: 3px;
+    background: rgba(255, 0, 0, 1);
+
+
+
+}
+h2::after{
+    content: "";
+    margin: 0 10px;
+    display: block;
+    box-shadow: 0px 1px 6px rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 50px;
+    height: 3px;
+    background: rgba(255, 0, 0, 1);
+}
+
 article h3{
     text-align: left;
     font: normal normal normal 19px/26px Nunito Sans;
@@ -227,6 +251,30 @@ main article p{
     opacity: 1;
     margin-bottom: 15px;
 }
+main h2::before{
+    content: "";
+    margin: 0 10px;
+    display: block;
+    box-shadow: 0px 1px 6px rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 50px;
+    height: 3px;
+    background: rgba(255, 0, 0, 1);
+}
+main h2::after{
+    content: "";
+    margin: 0 10px;
+    display: block;
+    box-shadow: 0px 1px 6px rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 50px;
+    height: 3px;
+    background: rgba(255, 0, 0, 1);
+}
+
+
+
+
 main button{
     padding: 10px 29px;
 }
@@ -256,6 +304,13 @@ article.main{
 
 
 /*CONTACT*/
+
+section.container p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
 
 section.container div{
@@ -291,15 +346,86 @@ form{
 input[type=name],
 textarea{
     width: 100%;
-    margin-bottom: 20px ;
+    height: 38px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: Nunito Sans;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid rgba(209, 209, 209, 1);
+
+
 }
-label{
-    display: inline-block;
-    padding-left: 20px;
-}
+
 input[type=message],
 textarea{
     width: 100%;
     height: 140px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: Nunito Sans;
+    color: black;
+    border-radius: 8px;
+    border: 1px solid rgba(209, 209, 209, 1);
 
+
+}
+
+label{
+    display: inline-block;
+    position: relative;
+    padding-left: 32px;
+    text-align: left;
+    font: 10px Open Sans;
+    color: rgba(178, 178, 178, 1);
+}
+input[type=checkbox]{
+    display: none;
+
+
+}
+input::placeholder{
+    padding-left: 12px;
+    text-align: left;
+    font: normal normal normal 16px/22px Nunito Sans;
+    letter-spacing: 0px;
+    color: rgba(178, 178, 178, 1);
+    opacity: 1;
+}
+textarea::placeholder {
+    text-align: left;
+    padding-left: 12px;
+    font: normal normal normal 16px/22px Nunito Sans;
+    letter-spacing: 0px;
+    color: rgba(178, 178, 178, 1);
+    opacity: 1;
+}
+
+
+form.message button{
+    text-align: right;
+    margin-top: 20px;
+    padding: 10px 52px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 3px 6px rgba(255, 0, 0, 0.3);
+    border: 1px solid rgba(255, 0, 0, 1);
+    border-radius: 40px;
+    color: rgba(255, 0, 0, 1);
+
+}
+label span{
+    content: "";
+    display: block;
+    left: 0;
+    top: 4px;
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border: 1px solid rgba(209, 209, 209, 1);
+    border-radius: 8px;
+    opacity: 1;
+
+}
+label input:checked+span{
+    background: url("../images/Icon_Check.svg") no-repeat center/70%;
 }
