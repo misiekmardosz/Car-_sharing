@@ -23,7 +23,7 @@ header {
     height: 90px;
     display: flex;
     align-items: center;
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 1;
 
@@ -78,12 +78,14 @@ header li:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
 }
 
 .banner{
     z-index: 2;
     padding: 160px;
+    position: relative;
 
 }
 .banner h1{
@@ -102,6 +104,7 @@ header li:hover{
     letter-spacing: 0px;
     color: rgba(255, 255, 255, 1);
     opacity: 1;
+    position: relative;
 }
 button{
     margin: 54px 12.5px;
@@ -120,30 +123,32 @@ button:hover{
     color: rgba(255, 0, 0, 1)
 
 }
-p.arrow::before{
-    content: "";
-    display: block;
-    box-shadow: 0px 1px 6px rgba(255, 0, 0, 0.3);
-    width: 55px;
-    height: 55px;
-    background: rgba(255, 0, 0, 1);
-    z-index: 1;
-    border-radius: 50px;
-    position: absolute;
-}
-a{
-    <a href="#div_id">jump link</a>
-}
-
-
-p.arrow{
+.arrow{
     display: block;
     background: url("../images/Icon_Arrow_Down.svg")no-repeat center/80%;
     width: 55px;
     height: 55px;
     position: absolute;
-    margin-top: 807px;
-    z-index: 2;
+    bottom: -27.5px;
+    z-index: 3;
+    transform-style: preserve-3d;
+}
+
+.arrow::after{
+    content: "";
+    display: block;
+    background: #FF0000 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #FF00004D;
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    /*opacity: 1;*/
+    z-index: -1;
+    position: absolute;
+    transform: translateZ(-1px);
+}
+a{
+    <a href="#div_id">jump link</a>
 }
 
 /*BLOG*/
@@ -495,9 +500,18 @@ footer {
     display: inline-block;
     color: #FF0000;
     text-align: left;
-    font: bold 27px Nunito Sans;
+    font: bold 25px Nunito Sans;
 }
 .footer_logo img{
+    height: 19px;
+
+
+    padding-right: 5px;
+}
+logo.footer_logo{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
 }
 
 footer ul{
