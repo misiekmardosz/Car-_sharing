@@ -14,7 +14,7 @@ Not responsive web design done on CL workshops
 ## General info
 
 * car sharing website created on Coderslab bootcamp
-* 
+* created to learn how to build layouts
 
 ## Technologies Used
 * HTML
